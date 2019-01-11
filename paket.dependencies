@@ -10,4 +10,3 @@ group Main
     storage none
     source https://api.nuget.org/v3/index.json
     nuget Microsoft.NET.Sdk.Functions 1.0.24
-    nuget FSharp.Data 3.0.0
