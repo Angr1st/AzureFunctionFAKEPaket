@@ -11,3 +11,4 @@ group Main
     source https://api.nuget.org/v3/index.json
     nuget Microsoft.NET.Sdk.Functions 1.0.24
     nuget FSharp.Core 4.2.3
+	nuget Microsoft.AspNetCore == 2.1.7 strategy: min

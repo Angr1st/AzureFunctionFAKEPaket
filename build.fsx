@@ -6,6 +6,7 @@ open Fake.IO.FileSystemOperators
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
 
+//Properties
 let paketPath = Path.combine ".paket" "paket.exe"
 
 let debugBuildOptions buildConfig= (
@@ -13,9 +14,13 @@ let debugBuildOptions buildConfig= (
         {options with Configuration=buildConfig})
 
 
-
+//Targes
 Target.create "Restore" (fun _ ->
     Shell.Exec(paketPath, "restore", "") |> ignore
+)
+
+Target.create "Install" (fun _ ->
+    Shell.Exec(paketPath, "install", "") |> ignore
 )
 
 Target.create "Clean" (fun _ ->
@@ -53,5 +58,7 @@ Target.create "All" ignore
 "Clean"
   ==> "Restore"
   ==> "BuildDebug"
+
+
 
 Target.runOrDefault "All"

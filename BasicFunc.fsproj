@@ -1,15 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="HelloYou.fs" />
     <Compile Include="Library.fs" />
-    <Compile Include="Functions.fs" />   
+    <Compile Include="Functions.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -18,7 +17,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Content>
-
   </ItemGroup>
-  <Import Project=".\.paket\Paket.Restore.targets" />
+  <Import Project=".paket\Paket.Restore.targets" />
 </Project>
